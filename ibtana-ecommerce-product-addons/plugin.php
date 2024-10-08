@@ -5,7 +5,7 @@
  * Description: Enhance your e-commerce product pages with Ibtana – Ecommerce Product Addons. Create eye-catching product pages without the need for coding skills.
  * Author: VowelWeb
  * Author URI: https://www.vowelweb.com/
- * Version: 0.4.7
+ * Version: 0.4.7.1
  * Requires at least: 5.2
  * Requires PHP: 7.2
  * License: GPL2+

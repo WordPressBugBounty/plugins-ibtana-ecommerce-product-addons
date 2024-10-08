@@ -2,9 +2,9 @@
 Contributors: VowelWeb
 Tags: woocommerce addons, gutenberg, templates, product page
 Requires at least: 5.0
-Tested up to: 6.5.3
+Tested up to: 6.6.2
 Requires PHP: 7.2
-Stable tag: 0.4.7
+Stable tag: 0.4.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,12 @@ Ibtana - Ecommerce Product Addons currently includes the following blocks:
 * Product Meta
 
 This plugin seamlessly simplifies the process of crafting sections such as the Product Gallery, Add To Cart functionality, Product Price, Product Review, Product Rating, and Product Meta on individual product pages. Its adaptability is evident in its integration across a variety of themes and live websites, showcasing its widespread applicability. VW Themes, a reputable provider, offers a collection of free WordPress themes exclusively developed using the Ibtana – Ecommerce Product Addons plugin. Dive into a world of creativity and efficiency as you explore these themes, each meticulously crafted to enhance the user experience and streamline the creation of engaging and functional e-commerce websites.
-Explore Themes: [Free WordPress Themes](https://www.vwthemes.com/collections/free-wordpress-themes)
+
+**Explore Free Themes: [Free WordPress Themes](https://www.vwthemes.com/collections/free-wordpress-themes)**
+
+**Explore the Collection of Premium Theme (Starting from $29) - [Premium WordPress Themes](https://www.vwthemes.com/collections/premium-wordpress-themes)**
+
+**Get the 250+ WordPress Theme Bundle at just $99 - [WP Theme Bundle](https://www.vwthemes.com/products/wp-theme-bundle)**
 
 ## More Info About the Blocks
 
@@ -73,6 +78,9 @@ This Block allows you to construct and customize your product Meta fields. Selec
 4. Product Review.
 
 == Changelog ==
+
+= 0.4.7.1 - 2024-08-10 =
+* Minor Fixes.
 
 = 0.4.7 - 2024-17-08 =
 * Plugin Optimizations.
