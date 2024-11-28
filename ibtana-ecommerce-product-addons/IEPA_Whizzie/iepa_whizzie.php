@@ -92,9 +92,8 @@ class IEPA_Whizzie {
 		$this->plugin_url		=	trailingslashit( IEPA_PLUGIN_URI . $relative_url );
 		$this->plugin_url		=	IEPA_PLUGIN_URI . 'IEPA_Whizzie/';
 
-		$current_plugin			=	get_plugin_data( IEPA_PLUGIN_FILE );
-		$this->plugin_title = $current_plugin[ 'Name' ];
-		$this->plugin_name	=	strtolower( preg_replace( '#[^a-zA-Z]#', '', $current_plugin[ 'Name' ] ) );
+		$this->plugin_title = IEPA_PLUGIN_NAME;
+		$this->plugin_name	=	strtolower( preg_replace( '#[^a-zA-Z]#', '', IEPA_PLUGIN_NAME ) );
 		$this->page_slug		=	apply_filters( $this->plugin_name . '_theme_setup_wizard_page_slug', $this->plugin_name . '-setup' );
 
 		$this->parent_slug	=	apply_filters( $this->plugin_name . '_theme_setup_wizard_parent_slug', '' );
@@ -342,7 +341,7 @@ class IEPA_Whizzie {
 			<div class="iepa-cards-wrap" <?php if( $iepa_all_dependencies_available ) { echo esc_attr( "style=display:flex;" ); } ?>>
 				<?php
 				// Check if the license is activated or not
-				$iepa_key = str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key';
+				$iepa_key = str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key';
 				$iepa_key_arr = get_option( $iepa_key );
 				$iepa_key_arr_license_status = false;
 				if ( $iepa_key_arr ) {

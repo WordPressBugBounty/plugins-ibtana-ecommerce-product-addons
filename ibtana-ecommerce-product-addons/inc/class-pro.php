@@ -221,7 +221,7 @@ class IEPA_Pro {
 		$is_gt_editor_enabled = get_post_meta( $post->ID, 'iepa_builder', 'single' );
 		$post_status					=	( 'auto-draft' != get_post_status() ) ? 1 : 0;
 
-		$ibtana_ecommerce_product_addons_license_key = get_option( str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key' );
+		$ibtana_ecommerce_product_addons_license_key = get_option( str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key' );
 		$ibtana_ecommerce_product_addons_license_key_license_status = false;
 		if ( isset( $ibtana_ecommerce_product_addons_license_key['license_status'] ) ) {
 			if ( $ibtana_ecommerce_product_addons_license_key['license_status'] == true ) {

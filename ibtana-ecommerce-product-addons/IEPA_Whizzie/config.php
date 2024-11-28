@@ -17,9 +17,7 @@ if ( ! defined( 'IEPA_WHIZZIE_DIR' ) ) {
 require trailingslashit( IEPA_WHIZZIE_DIR ) . 'iepa_whizzie.php';
 
 // Gets the plugin object
-$current_plugin = get_plugin_data( IEPA_PLUGIN_FILE );
-$plugin_title = $current_plugin[ 'Name' ];
-
+$plugin_title = IEPA_PLUGIN_NAME;
 
 /**
  * Make changes below

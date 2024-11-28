@@ -29,7 +29,7 @@ $iepa_response = wp_remote_post( $iepa_activate_license_endpoint , array(
   'body'        => wp_json_encode( array(
       'add_on_key'          =>  $iepa_post_add_on_key,
       'site_url'            =>  site_url(),
-      'add_on_text_domain'  =>  get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain']
+      'add_on_text_domain'  =>  IEPA_TEXT_DOMAIN
   ) ),
   'headers'     => [
       'Content-Type' => 'application/json',
@@ -52,7 +52,7 @@ if ( is_wp_error( $iepa_response ) ) {
   $iepa_api_response = json_decode( $iepa_response, true );
 
 
-	$iepa_key = str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key';
+	$iepa_key = str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key';
   if ( $iepa_api_response['status'] == true ) {
     update_option( $iepa_key, [
       'license_key'     			=>	$iepa_post_add_on_key,

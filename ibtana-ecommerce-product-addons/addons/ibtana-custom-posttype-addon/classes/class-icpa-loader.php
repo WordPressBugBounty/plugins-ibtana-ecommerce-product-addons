@@ -46,13 +46,13 @@ if ( ! class_exists( 'ICPA_Loader' ) ) {
 		 * @return void
 		 */
     public function icpa_add_styles( $hook ) {
-			wp_enqueue_media();
-			if ( __( 'ibtana-settings', 'ibtana-ecommerce-product-addons' ) . '_page_ibtana-custom-post-type' != $hook ) {
-				return;
-			}
+		wp_enqueue_media();
+		if ( __( 'ibtana-settings', 'ibtana-ecommerce-product-addons' ) . '_page_ibtana-custom-post-type' != $hook ) {
+			return;
+		}
 
-      wp_enqueue_style( 'icpa-admin-css', ICPA_PLUGIN_URI . "assets/css/admin.css", [], ICPA_VERSION );
-			wp_enqueue_script( 'icpa-admin-js', ICPA_PLUGIN_URI . "assets/js/admin.js", array( 'jquery' ), ICPA_VERSION );
+      	wp_enqueue_style( 'icpa-admin-css', ICPA_PLUGIN_URI . "assets/css/admin.css", [], ICPA_VERSION );
+		wp_enqueue_script( 'icpa-admin-js', ICPA_PLUGIN_URI . "assets/js/admin.js", array( 'jquery' ), ICPA_VERSION );
     }
 
 		function icpa_process_post_type() {

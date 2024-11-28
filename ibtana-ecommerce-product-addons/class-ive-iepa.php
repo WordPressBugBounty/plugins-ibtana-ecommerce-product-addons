@@ -32,7 +32,7 @@ if ( ! class_exists( 'IEPA_Backend' ) ) :
 		}
 
 		function iepa_activation_status() {
-			$ibtana_ecommerce_product_addons_license_key = get_option( str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key' );
+			$ibtana_ecommerce_product_addons_license_key = get_option( str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key' );
 
 			$iepa_license_key 		=	'';
 			if ( $ibtana_ecommerce_product_addons_license_key ) {
@@ -52,7 +52,7 @@ if ( ! class_exists( 'IEPA_Backend' ) ) :
 			$request_body = array(
 					'add_on_key'          =>  $iepa_license_key,
 					'site_url'            =>  site_url(),
-					'add_on_text_domain'  =>  get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain']
+					'add_on_text_domain'  =>  IEPA_TEXT_DOMAIN
 			);
 
 
@@ -87,7 +87,7 @@ if ( ! class_exists( 'IEPA_Backend' ) ) :
 				if ( $iepa_api_response['status'] == true ) {
 
 					// Update the template limit here
-					$iepa_key = str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key';
+					$iepa_key = str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key';
 					if ( isset( $iepa_api_response['save_template_limit'] ) && ( $iepa_api_response['save_template_limit'] != '' ) ) {
 						$ive_add_on_license_key = get_option( $iepa_key );
 						if ( $ive_add_on_license_key ) {
@@ -121,7 +121,7 @@ if ( ! class_exists( 'IEPA_Backend' ) ) :
 
 
 					// Update the template limit here
-					$iepa_key = str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key';
+					$iepa_key = str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key';
 					$ive_add_on_license_key = get_option( $iepa_key );
 
 

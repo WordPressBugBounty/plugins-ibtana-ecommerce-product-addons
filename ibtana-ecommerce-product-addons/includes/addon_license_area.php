@@ -9,7 +9,7 @@ $iepa_plan_expiration_date	=	'';
 
 
 
-$ibtana_ecommerce_product_addons_license_key = get_option( str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key' );
+$ibtana_ecommerce_product_addons_license_key = get_option( str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key' );
 if ( $ibtana_ecommerce_product_addons_license_key ) {
   if (
 		isset( $ibtana_ecommerce_product_addons_license_key['license_key'] ) &&

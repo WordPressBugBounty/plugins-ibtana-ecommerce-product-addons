@@ -49,7 +49,7 @@ if ( ! class_exists( 'IEPA_Loader' ) ) {
 		 */
 		public function iepa_load_plugin() {
 
-			$iepa_key = str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key';
+			$iepa_key = str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key';
 			$iepa_key_arr = get_option( $iepa_key );
 			$iepa_key_arr_license_status = false;
 			if ( $iepa_key_arr ) {
@@ -96,7 +96,7 @@ if ( ! class_exists( 'IEPA_Loader' ) ) {
 				}
 
 				add_filter( 'ive_add_on_license_info', function( $ive_add_on_license_keys ) {
-					$iepa_key = str_replace( '-', '_', get_plugin_data( IEPA_PLUGIN_FILE )['TextDomain'] ) . '_license_key';
+					$iepa_key = str_replace( '-', '_', IEPA_TEXT_DOMAIN ) . '_license_key';
 					$ive_add_on_license_keys[ $iepa_key ] = get_option( $iepa_key );
 					return $ive_add_on_license_keys;
 				} );
@@ -116,7 +116,7 @@ if ( ! class_exists( 'IEPA_Loader' ) ) {
 		public function iepa_woocommerce_fails_to_load() {
 			$iepa_notice_class = 'notice notice-error';
 			/* translators: %s: html tags */
-			$iepa_plugin_name = get_plugin_data( IEPA_PLUGIN_FILE )['Name'];
+			$iepa_plugin_name = IEPA_PLUGIN_NAME;
 			$iepa_message_notice = sprintf(
 				__(
 						'The %1$s' . $iepa_plugin_name . '%2$s plugin requires %1$sWooCommerce%2$s plugin installed & activated.',
@@ -171,7 +171,7 @@ if ( ! class_exists( 'IEPA_Loader' ) ) {
 		public function iepa_ive_fails_to_load() {
 			$iepa_notice_class = 'notice notice-error';
 			/* translators: %s: html tags */
-			$iepa_plugin_name = get_plugin_data( IEPA_PLUGIN_FILE )['Name'];
+			$iepa_plugin_name = IEPA_PLUGIN_NAME;
 			$iepa_message_notice = sprintf(
 				__(
 						'The %1$s' . $iepa_plugin_name . '%2$s plugin requires %1$sIbtana – WordPress Website Builder%2$s plugin installed & activated.',
