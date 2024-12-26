@@ -5,7 +5,7 @@
  * Description: Enhance your e-commerce product pages with Ibtana – Ecommerce Product Addons. Create eye-catching product pages without the need for coding skills.
  * Author: VowelWeb
  * Author URI: https://www.vowelweb.com/
- * Version: 0.4.7.2
+ * Version: 0.4.7.3
  * Requires at least: 5.2
  * Requires PHP: 7.2
  * License: GPL2+
@@ -35,7 +35,7 @@ define( 'IEPA_ABSPATH', dirname(__FILE__) . '/' );
 define( 'SHOPIFY_IBTANA_LICENSE_API_ENDPOINT', 'https://license.vwthemes.com/api/public/' );
 
 define( 'IEPA_PLUGIN_NAME', 'Ibtana - Ecommerce Product Addons' );
-define( 'IEPA_VERSION', '0.4.7.2' );
+define( 'IEPA_VERSION', '0.4.7.3' );
 define( 'IEPA_TEXT_DOMAIN', 'ibtana-ecommerce-product-addons' );
 
 require_once 'classes/class-iepa-loader.php';
