@@ -32,23 +32,23 @@ $config['page_title']	= 'Get Started';
 $config['steps'] = array(
 	'intro' => array(
 		'id'			=> 'intro', // ID for section - don't rename
-		'title'			=> __( 'Welcome to ', IEPA_TEXT_DOMAIN ) . $plugin_title, // Section title
+		'title'			=> 'Welcome to ' . $plugin_title, // Section title
 		'icon'			=> 'dashboard', // Uses Dashicons
-		'button_text'	=> __( 'Start Now', IEPA_TEXT_DOMAIN ), // Button text
+		'button_text'	=> 'Start Now', // Button text
 		'can_skip'		=> false // Show a skip button?
 	),
 	'plugins' => array(
 		'id'			=> 'plugins',
-		'title'			=> __( 'Plugins', IEPA_TEXT_DOMAIN ),
+		'title'			=> 'Plugins',
 		'icon'			=> 'admin-plugins',
-		'button_text'	=> __( 'Install Plugins', IEPA_TEXT_DOMAIN ),
+		'button_text'	=> 'Install Plugins',
 		'can_skip'		=> false
 	),
 	'done' => array(
 		'id'			=> 'done',
-		'title'			=> __( 'All Done', IEPA_TEXT_DOMAIN ),
+		'title'			=> 'All Done',
 		'icon'			=> 'yes',
-		'button_text'	=> __( 'Check Now', IEPA_TEXT_DOMAIN ),
+		'button_text'	=> 'Check Now',
 	)
 );
 

@@ -36,8 +36,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 				self::$block_attributes = array(
 					'iepa/iepa-add-to-cart'								=> 	array(
 							'slug'				=>	'',
-							'title'       =>	__( 'Add To Cart', 'ibtana-ecommerce-product-addons' ),
-							'description' =>	__( 'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.', 'ibtana-ecommerce-product-addons' ),
+							'title'       =>	'Add To Cart',
+							'description' =>	'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.',
 							'default'     =>	true,
 							'attributes'  =>	array(
 							'uniqueID' 					=>	'',
@@ -96,8 +96,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 					),
 					'iepa/iepa-product-images'						=> 	array(
 						'slug'				=>	'',
-						'title'				=>	__( 'Product Images', 'ibtana-ecommerce-product-addons' ),
-						'description'	=>	__( 'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.', 'ibtana-ecommerce-product-addons' ),
+						'title'				=>	'Product Images',
+						'description'	=>	'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.',
 						'default'     =>	true,
 						'attributes'	=>	array(
 									'uniqueID'				=>	'',
@@ -106,8 +106,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 					),
 					'iepa/iepa-product-price'							=>	array(
 						'slug'			=>	'',
-						'title'			=>	__( 'Product Price', 'ibtana-ecommerce-product-addons' ),
-						'description'	=>	__( 'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.', 'ibtana-ecommerce-product-addons' ),
+						'title'			=>	'Product Price',
+						'description'	=>	'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.',
 						'default'		=> true,
 						'attributes'	=> array(
 									'uniqueID'						=>	'',
@@ -138,8 +138,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 					),
 					'iepa/iepa-product-review'						=>	array(
 						'slug'				=>	'',
-						'title'				=>	__( 'Product Review', 'ibtana-ecommerce-product-addons' ),
-						'description'	=>	__( 'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.', 'ibtana-ecommerce-product-addons' ),
+						'title'				=>	'Product Review',
+						'description'	=>	'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.',
 						'default'			=>	true,
 						'attributes'	=>	array(
 							'uniqueID'						=>	'',
@@ -180,8 +180,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 					),
 					'iepa/iepa-product-reviews'						=>	array(
 						'slug'				=>	'',
-						'title'				=>	__( 'Product Reviews', 'ibtana-ecommerce-product-addons' ),
-						'description'	=>	__( 'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.', 'ibtana-ecommerce-product-addons' ),
+						'title'				=>	'Product Reviews',
+						'description'	=>	'Do not limit yourself to showing only particular products. Use the Product Slider block to create a separate category of your favorite products for featuring it on the slider.',
 						'default'			=>	true,
 						'attributes'	=>	array(
 							'uniqueID'						=> '',
@@ -230,8 +230,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 					),
 					'iepa/iepa-product-meta'							=>	array(
 						'slug'				=>	'',
-						'title'				=>	__( 'Product Meta', 'ibtana-ecommerce-product-addons' ),
-						'description'	=>	__( 'This Block allows you to construct and customize your product Meta fields. Select and show a single product in a new, high-effect fashion. Control textual content alignment, hide or display the price and description, upload a color overlay.', 'ibtana-ecommerce-product-addons' ),
+						'title'				=>	'Product Meta',
+						'description'	=>	'This Block allows you to construct and customize your product Meta fields. Select and show a single product in a new, high-effect fashion. Control textual content alignment, hide or display the price and description, upload a color overlay.',
 						'default'			=>	true,
 						'attributes'	=>	array(
 							'uniqueID' => '',
@@ -1077,8 +1077,8 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 					),
 					'iepa/iepa-product-sale-countdown'		=>	array(
 						'slug'				=>	'',
-						'title'				=>	__( 'Product Sale Countdown', 'ibtana-ecommerce-product-addons' ),
-						'description'	=>	__( 'Product Sale Countdown', 'ibtana-ecommerce-product-addons' ),
+						'title'				=>	'Product Sale Countdown',
+						'description'	=>	'Product Sale Countdown',
 						'default'			=>	true,
 						'attributes'	=>	array(
 							'uniqueID' => '',

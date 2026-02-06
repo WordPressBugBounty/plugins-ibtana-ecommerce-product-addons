@@ -4,7 +4,7 @@ Tags: woocommerce addons, gutenberg, templates, product page
 Requires at least: 5.0
 Tested up to: 6.7.1
 Requires PHP: 7.2
-Stable tag: 0.4.7.4
+Stable tag: 0.4.7.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,7 +79,10 @@ This Block allows you to construct and customize your product Meta fields. Selec
 
 == Changelog ==
 
-= 0.4.7.4 - 2025-30-04 =
+= 0.4.7.5 - 2025-15-12 =
+* Plugin Optimizations.
+
+= 0.4.7.4 - 2025-09-04 =
 * Minor Fixes.
 
 = 0.4.7.3 - 2024-26-12 =
