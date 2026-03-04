@@ -101,7 +101,19 @@ if ( ! class_exists( 'IEPA_Config' ) ) {
 						'default'     =>	true,
 						'attributes'	=>	array(
 									'uniqueID'				=>	'',
-									'galleryPosition'	=>	'bottom'
+									'galleryPosition'	=>	'bottom',
+									'sliderGallery'		=>	false,
+									'sliderArrow'			=>	true,
+									'lightbox'				=>	false,
+									'autoplay'				=>	false,
+									'loop'						=>	false,
+									'zoom'						=>	false,
+									'arrowColor'			=>	'#ffffff',
+									'arrowBgColor'		=>	'#000000',
+									'borderWidth'			=>	0,
+									'borderColor'			=>	'#000000',
+									'borderStyle'			=>	'solid',
+									'borderRadius'		=>	0
 						)
 					),
 					'iepa/iepa-product-price'							=>	array(

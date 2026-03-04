@@ -540,12 +540,15 @@ class IEPA_Blocks_Public {
               continue;
             }
 
+            // Use title first, then fallback to alt or caption
+            $image_title = $imgProps['title'] ? $imgProps['title'] : ($imgProps['alt'] ? $imgProps['alt'] : $imgProps['caption']);
+
             echo wp_kses_post(
               apply_filters(
                 'woocommerce_single_product_image_thumbnail_html',
                 sprintf(
                   '<li title="%s">%s</li>',
-                  esc_attr( $imgProps['caption'] ),
+                  esc_attr( $image_title ),
                   wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'thumbnail' ), 0, $thumbnails_catlog )
                 ),
                 $attachment_id,

@@ -57,7 +57,7 @@ function ibtana_ecommerce_product_addons_iepa_block_assets() { // phpcs:ignore
 	wp_enqueue_script( 'iepa-fancybox-js', plugins_url( '/dist/js/jquery.fancybox.js', dirname( __FILE__ ) ), array( 'jquery' ), IEPA_VERSION, true );
 	wp_enqueue_script( 'iepa-zoom-js', plugins_url( '/dist/js/jquery.zoom.min.js', dirname( __FILE__ ) ), array( 'jquery' ), IEPA_VERSION, true );
 	wp_enqueue_style( 'iepa-fancybox-css', plugins_url( '/dist/css/fancybox.css', dirname( __FILE__ ) ), [], IEPA_VERSION );
-	wp_enqueue_style( 'iepa-front-css', plugins_url( '/dist/css/gallery-slider.css', dirname( __FILE__ ) ), [], IEPA_VERSION );
+	wp_enqueue_style( 'iepa-front-css', plugins_url( '/dist/css/gallery-slider.css', dirname( __FILE__ ) ), array( 'dashicons' ), IEPA_VERSION );
 	wp_enqueue_script( 'iepa-front-js', plugins_url( '/dist/js/gallery-slider.js', dirname( __FILE__ ) ), array( 'jquery' ), IEPA_VERSION, true );
 
 	// WP Localized globals. Use dynamic PHP stuff in JavaScript via `iepaGlobal` object.

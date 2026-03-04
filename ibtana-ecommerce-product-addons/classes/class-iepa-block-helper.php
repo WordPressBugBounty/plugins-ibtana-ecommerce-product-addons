@@ -213,7 +213,7 @@ if ( ! class_exists( 'IEPA_Block_Helper' ) ) {
 		}
 
 		public static function get_product_images_css( $attr, $id ) {
-			$defaults = IEPA_Helper::$block_list['iepa/iepa-add-to-cart']['attributes'];
+			$defaults = IEPA_Helper::$block_list['iepa/iepa-product-images']['attributes'];
 
 			$attr = array_merge( $defaults, $attr );
 
@@ -275,6 +275,25 @@ if ( ! class_exists( 'IEPA_Block_Helper' ) ) {
 				}
 			} else {
 				$selectors[' .woocommerce-product-gallery ol']['padding']			=	0;
+			}
+
+			// Add CSS for border settings
+			if ( isset( $attr['borderWidth'] ) && $attr['borderWidth'] > 0 ) {
+				$borderWidth = (int) $attr['borderWidth'];
+				$borderColor = isset( $attr['borderColor'] ) ? $attr['borderColor'] : '#000000';
+				$borderStyle = isset( $attr['borderStyle'] ) ? $attr['borderStyle'] : 'solid';
+				$borderValue = $borderWidth . 'px ' . $borderStyle . ' ' . $borderColor;
+				
+				$selectors[' #iepa-gallery img']['border'] = $borderValue;
+			}
+
+			// Add CSS for border radius
+			if ( isset( $attr['borderRadius'] ) && $attr['borderRadius'] > 0 ) {
+				$borderRadius = (int) $attr['borderRadius'];
+				$radiusValue = $borderRadius . 'px';
+				
+				$selectors[' #iepa-gallery img']['border-radius'] = $radiusValue;
+				$selectors[' #iepa-gallery img']['overflow'] = 'hidden';
 			}
 
 

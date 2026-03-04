@@ -472,6 +472,22 @@ class IEPA_Blocks {
           'arrowBgColor' =>  [
             'type'    =>  'string',
             'default' =>  ''
+          ],
+          'borderWidth'			=> [
+            'type'    =>  'number',
+            'default' =>  0
+          ],
+          'borderColor'			=>	[
+            'type'    =>  'string',
+            'default' =>  '#000000'
+          ],
+          'borderStyle'			=>	[
+            'type'    =>  'string',
+            'default' =>  'solid'
+          ],
+          'borderRadius'		=>	[
+            'type'    =>  'number',
+            'default' =>  0
           ]
         ]
       ],
