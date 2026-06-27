@@ -22,7 +22,7 @@ class IEPA_Pro {
 	public function __construct() {
 		add_filter( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'save_post',      array( $this, 'save_iepa_meta' ) );
-		add_filter( 'wp_ajax_iepa_use_gt_editor', [ $this, 'iepa_use_gt_editor' ] );
+		add_action( 'wp_ajax_iepa_use_gt_editor', [ $this, 'iepa_use_gt_editor' ] );
 	}
 
 	public function iepa_import_saved_single_product_template() {
@@ -56,10 +56,16 @@ class IEPA_Pro {
 	}
 
 	public function iepa_use_gt_editor() {
+		check_ajax_referer( 'iepa_use_gt_editor_nonce', 'nonce' );
 
-		$post_id = sanitize_text_field( $_POST['post_id'] );
+		$post_id = absint( $_POST['post_id'] );
 
-		if ( $_POST['iepa_use_gt_editor'] === 'true' ) {
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
+			wp_send_json( [ 'status' => false ] );
+			return;
+		}
+
+		if ( isset( $_POST['iepa_use_gt_editor'] ) && $_POST['iepa_use_gt_editor'] === 'true' ) {
 			update_post_meta( $post_id, 'iepa_builder', "1" );
 		} else {
 			delete_post_meta( $post_id, 'iepa_builder' );
@@ -267,8 +273,9 @@ class IEPA_Pro {
 			<?php
 		}
 
-		$admin_url = admin_url( 'admin-ajax.php?action=iepa_use_gt_editor' );
-		$post_id = get_the_ID();
+		$admin_url              = admin_url( 'admin-ajax.php?action=iepa_use_gt_editor' );
+		$post_id                = get_the_ID();
+		$iepa_gt_editor_nonce   = wp_create_nonce( 'iepa_use_gt_editor_nonce' );
 
 
 		?>
@@ -330,7 +337,8 @@ class IEPA_Pro {
 
 		        $.post( '<?php echo esc_url( $admin_url ); ?>' ,
 							{
-								post_id:	'<?php echo esc_attr( $post_id ); ?>',
+								post_id:            '<?php echo esc_attr( $post_id ); ?>',
+								nonce:              '<?php echo esc_attr( $iepa_gt_editor_nonce ); ?>',
 								iepa_use_gt_editor: document.querySelector('#iepa_product_metabox').checked
 							}, function ( data ) {
 								if ( data.status === true ) {

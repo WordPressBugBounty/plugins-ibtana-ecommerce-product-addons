@@ -819,6 +819,10 @@ if ( ! class_exists( 'IEPA_MM_Menu_Settings' ) ) {
     }
 
     public function iepa_admin_footer_function() {
+      $screen = get_current_screen();
+      if ( ! $screen || $screen->base !== 'nav-menus' ) {
+        return;
+      }
       $allowed_html = array(
         'div'      => array(
           'class' =>  array(),
